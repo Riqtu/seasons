@@ -1,0 +1,143 @@
+@import '../var.scss';
+.Menu__button{
+    position: fixed;
+    z-index: 1002;
+    // background-color: blanchedalmond;
+    border:none;
+    left: auto;
+    right: 25px;
+    top: 18px;
+    width: 35px;
+    height: 50px;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+    @media screen and (max-width: 500px) {
+        top: 6px;
+        right: 20px;
+    }
+    // animation: startHeaderMenu 0.6s ease-in forwards;
+}
+.Menu__button:focus{
+    outline: 1px dashed rgba(255, 255, 255, 0.479);
+}
+.button-element,
+.button-element::before,
+.button-element::after{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(48, 48, 48);
+    left: 0;
+    top: calc(50% - 1.5px);
+    transition: 0.3s;
+}
+.button-element::before{
+    content: '';
+    transform: translateY(-10px);
+}
+.button-element::after{
+    content: '';
+    transform: translateY(10px);
+}
+
+.Menu__button:hover{
+    .button-element::before{
+        transform: translateY(-15px);
+    }
+    .button-element::after{
+        transform: translateY(15px);
+    }
+}
+
+.active{
+    .button-element,
+    .button-element::before,
+    .button-element::after{
+        background-color: #B29261;
+    }
+    .button-element{
+        height: 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .button-element::before{
+        transform: rotate(45deg);
+    }
+    .button-element::after{
+        transform: rotate(-45deg);
+    }
+}
+.active:focus{
+    outline: 1px dashed rgba(0, 0, 0, 0.479);
+}
+.active:hover{
+    .button-element::before{
+        transform: rotate(45deg);
+    }
+    .button-element::after{
+        transform: rotate(-45deg);
+    }
+}
+.menu__container{
+    position: fixed;
+    width: 100%; 
+    height:100%;
+    background-color: #08533D;
+    z-index: 100;
+    left: 0;
+    transform: translateY(-107%);
+    transition: 0.6s ease;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    will-change: transform; 
+    @media screen and (max-width: 500px) {
+        justify-content: start;
+    }
+    li{
+        float: left;
+        list-style-type: none; 
+        @media screen and (max-width: 500px) {
+            float: none;
+            margin-top: 10px;
+        }
+        @media screen and (max-width: 320px) {
+            float: none;
+        }
+    }
+    a{
+        text-decoration: none;
+        font-size: 30pt;
+        color: #B29261;
+        text-transform: uppercase;
+        // font-weight: 900;
+        // margin-left: -43px;
+        font-family: FuturaBook;
+        line-height: 1.5;
+        transition: 0.6s;
+        margin-left: 50px;
+        @media screen and (max-width : 500px) {
+            font-size: 19pt;
+            margin-left: 15px;
+        }
+    }
+    a:hover{
+        color: white;
+    }
+    a:focus{
+        color: $mainColor;
+        outline: 1px dashed rgba(0, 0, 0, 0.479);
+        animation: focus 0.3s forwards ease-in; 
+      }
+}
+.container-active{
+    transform: translateY(0%);
+}
+@keyframes startHeaderMenu{
+    0%{
+        top: -80px;
+    }
+    100%{
+        top: 18px;
+    }
+}

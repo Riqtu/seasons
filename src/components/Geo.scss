@@ -1,0 +1,61 @@
+.Geo{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    transition: 0.6s;
+    // filter: opacity(0%);
+    .Geo__map{
+        position: absolute;
+        width: 50%;
+        height: 400px;
+        top: calc(55% - 200px);
+        left: 25%;
+        // background-color: blue;
+        box-shadow: 10px 10px 20px black;
+        @media screen and (max-width: 500px) {
+            width: 90%;
+            left: 5%;
+        }
+    }
+    .Geo__logo{
+        position: absolute;
+        top: calc(55% - 340px);
+        left: 25%;
+        h1{
+            font-family: Bergen;
+            font-size: 50pt;
+        }
+        @media screen and (max-width: 500px) {
+            h1{
+                font-size: 36pt;
+            }
+            // top: calc(55% - 340px);;
+            left: 6%;
+        }
+    }
+    .Geo__contact{
+        position: absolute;
+        top: calc(55% + 210px);
+        left: 25%;
+        h3{
+            font-family: FuturaBook;
+            font-size: 12pt;
+        }
+        @media screen and (max-width: 500px) {
+            left: 5%;
+        }
+    }
+    .Geo__img{
+        position: absolute;
+        top: calc(55% + 80px);
+        left: calc(50% + 260px);
+        box-shadow: none;
+        img{
+            width: 200px;
+        }
+        @media screen and (max-width: 1920px) and (min-width:1600px){
+            left: calc(50% + 380px);
+        }
+    }
+}

@@ -1,0 +1,65 @@
+
+.App__back{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .back-circle{
+        position: fixed;
+        left: calc(50% - 250px);
+        top: calc(50% - 250px);
+        width: 500px;
+        height: 500px;
+        background-image: url('./img/fff.png');
+        background-size: contain;
+        filter: opacity(15%);
+        animation: backCircleRotate 60s infinite linear;
+        @media screen and (max-width:320px) {
+            background-image: url('./img/ff-min.png');
+        }
+    }
+
+    .back-line{
+        position: absolute;
+        width: 150%;
+        height: 5px;
+        top: 60%;
+        left: -15%;
+        transform: rotate(-30deg);
+        background-color: rgba(0, 0, 0, 0.267);
+    }
+}
+
+.switch-wrapper {
+    position: relative;
+  }
+   
+  .switch-wrapper > div {
+    position: absolute;
+  }
+
+.zStudio{
+    font-family: FuturaBook;
+    position: absolute;
+    top: auto;
+    bottom: 1%;
+    left: auto;
+    right: 1%;
+    font-size: 10pt;
+    opacity: 0.2;
+    a{
+        color: black;
+    }
+}
+.About, .Delivery, .Geo, .Guests, .Interior, .Main{
+    min-height: 790px;
+    // overflow-x: hidden;
+    @media screen and (max-width: 600px) {
+        min-height: 667px;
+    }
+}
+@keyframes backCircleRotate{
+    100%{
+        transform: rotate(360deg)
+    }
+}

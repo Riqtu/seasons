@@ -1,0 +1,311 @@
+.Delivery{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    transition: 0.6s;
+    animation: deliveryStart 0.6s forwards ease-in-out;
+    overflow: hidden;
+    // overflow-y: auto;
+    @media screen and (max-width: 1536px) and (min-width: 1442px) {
+        min-height: 720px;
+    }
+    @media screen and (max-width:500px) {
+        min-height: 980px;
+    }
+    @media screen and (max-width:400px) {
+        min-height: 800px;
+    }
+    @media screen and (max-width:320px) {
+        min-height: 720px;
+    }
+    .pad{
+        padding: 30px 15%;
+        // overflow: hidden;
+        @media screen and (max-width: 500px){
+            padding: 30px 0%;
+        }
+    }
+    img{
+        box-shadow: 10px 10px 20px black;
+    }
+    .gallery{
+        position: absolute;
+        width: 100%;
+        padding-top:11%;
+        @media screen and (max-width: 1920px) and (min-width: 1800px) {
+            padding-top: 8%;
+        }
+        @media screen and (max-width: 1536px) and (min-width: 1442px) {
+            padding-top: 4%;
+        }
+        @media screen and (max-width: 1200px) {
+            padding-top: 16%;
+        }
+        @media screen and (max-width: 1200px) {
+            padding-top: 24%;
+        }
+        @media screen and (max-width: 500px) {
+            padding-top: 30%;
+        }
+        @media screen and (max-width: 320px) {
+            padding-top: 34%;
+        }
+    }
+    .logo{
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        text-align: center;
+        h1{
+            font-family: Bergen;
+            font-size: 40pt;
+        }
+        @media screen and (max-width: 1536px) and (min-width: 1442px) {
+            display: none;
+        }
+        @media screen and (max-width: 500px) {
+            top: 25px;
+         }  
+    }
+    .callButton{
+        position: absolute;
+        top: auto;
+        bottom: 25px;
+        left: calc(50% - 65px);
+        width: 130px;
+        height: 40px;
+        background-color: #08533D;
+        border: none;
+        color: white;
+        font-family: FuturaBook;
+        border-radius: 10px;
+        padding-left: 50px;
+        font-size: 10pt;
+        background-image: url('../img/box.png');
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position-x: 10%;
+        background-position-y: 40%;
+        box-shadow: 2px 2px 5px black;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .callButton:hover{
+        background-color: #B29261;
+        box-shadow: 1px 1px 5px black;
+    }
+    .callContainer{
+        top: 0;
+        position: fixed;
+        width: 375px;
+        height: 50%;
+        left: calc(50% - 187.5px);
+        background-color: rgba(255, 255, 255, 0.877);
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        transform: translateY(200%);
+        transition: 1s;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        @media screen and (max-width: 500px) {
+            width: 100%;
+            left: 0;
+        }  
+    }
+    .callContainer-active{
+        transform: translateY(100%);
+    }
+    .linksContainer{
+        position: relative;
+        width: 300px;
+        // height: 500px;
+        // background-color: #08533D;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+    li{
+        margin-bottom: 15px;
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+        list-style-type: none;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .links-Ya{
+        background-color: rgb(251, 220, 78);
+        height: 50px;
+        background-image: url('../img/yandex.svg');
+        cursor: pointer;
+        transition: 0.3s;
+
+    }
+    .links-Ya:hover{
+        background-color: rgb(207, 181, 62);
+    }
+    .links-Delivery{
+        background-color: rgb(91, 194, 87);
+        height: 50px;
+        background-image: url('../img/club.svg');
+        cursor: pointer;
+        transition: 0.3s;
+
+    }
+    .links-Delivery:hover{
+        background-color: rgb(79, 173, 76);
+    }
+    .links-Seasons{
+        background-color: #08533D;
+        height: 50px;
+        background-image: url('../img/seasonslink1.png');
+        background-size: 60%;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .links-Seasons:hover{
+        background-color: rgb(6, 63, 46);
+    }
+    .Seasons-sale{
+        font-family: FuturaBook;
+        position: absolute;
+        width: 120px;
+        height: 30px;
+        background-color: rgb(27, 207, 138);
+        top: 80%;
+        border-radius: 30px;
+        left: 61%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        font-size: 8pt;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        transition: 0.3s;
+
+    }
+    .Seasons-sale:hover{
+        background-color: rgb(21, 182, 120);
+
+    }
+    .mapButton{
+        position: absolute;
+        top: auto;
+        bottom: 15px;
+        left: calc(50% + 60px);
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        color: white;
+        font-family: FuturaBook;
+        // border-radius: 10px;
+        font-size: 11pt;
+        color: black;
+        transition: 0.3s;
+        box-shadow: none;
+        cursor: pointer;
+        line-height: 1;
+        img{
+            transition: 0.3s;
+            float: none;
+            width: 40px;
+            box-shadow: none;
+        }
+        label{
+            cursor: pointer;
+            top: 40px;
+            transition: 0.3s;
+        }
+
+    }
+    .mapButton:hover{
+        img{
+            width: 38px;
+        }
+    }
+    .mapContainer{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.562);
+        top: 0;
+        transition: 1s;
+        transform: translateY(200%);
+        will-change: transform;
+
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        cursor: pointer;
+        color: white;
+        img{
+            box-shadow: none;
+            cursor:default;
+            width: 52%;
+            padding-left: 24%;
+            padding-top: 40px;
+            z-index: 2;
+        }
+        h3{
+            z-index: 100;
+            margin-left: 10px;
+            font-family: FuturaBook;
+        }
+        @media screen and (max-width: 1536px) and (min-width: 1442px) {
+            transform: translateY(200%);
+
+        }
+        @media screen and (max-width: 1536px) and (min-width: 1442px) {
+            min-height: 720px;
+        }
+        @media screen and (max-width:500px) {
+            min-height: 800px;
+        }
+        @media screen and (max-width:320px) {
+            min-height: 720px;
+        }
+    }
+    .mapContainer__back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.562);
+        z-index: 1;
+        min-height: 790px;
+        @media screen and (max-width: 1536px) and (min-width: 1442px) {
+            min-height: 720px;
+        }
+        @media screen and (max-width:500px) {
+            min-height: 800px;
+        }
+        @media screen and (max-width:320px) {
+            min-height: 720px;
+        }
+    }
+    iframe{
+        z-index: 100;
+        width: 100vw !important;
+        height: 70vh;
+        margin-top: 10px
+    }
+    .mapContainer-active{
+        transform: translateY(0%);
+    }
+}
+.carousel .slide {
+    background: rgba(255, 255, 255, 0) !important;
+}
+.active{
+    filter: opacity(100%);
+}
+
+@keyframes deliveryStart{
+    0%{
+        filter: opacity(0);
+    }
+    100%{
+        filter: opacity(100%);
+    }
+}
